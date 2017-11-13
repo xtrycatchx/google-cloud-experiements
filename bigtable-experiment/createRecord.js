@@ -20,8 +20,7 @@ const rows = [
         key: '112233445566FF00',
         data: {
             yawe: {
-                public: 'xxxyyyzzz123456789',
-                private: 'ppaassawewasdasdi123456'
+                public: 'xxxyyyzzz123456789'
             }
         }
     }

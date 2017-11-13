@@ -5,11 +5,23 @@ const bigtable = Bigtable({
 });
 const instanceName = 'sydney-instance';
 var instance = bigtable.instance(instanceName);
-var table = instance.table('tablexyz');
+
+//butange ug filter para ang latest ra ang makuha
+const filter = [
+    {
+        column: {
+            cellLimit: 1
+        }
+    }
+];
+
+const table = instance.table('tablexyz');
 
 const row = table.row('112233445566FF00');
 
-row.get(function (err) {
+row.get({
+    filter: filter
+}, function (err) {
     if (err) {
         console.log(`error getting row ${err}`)
     } else {

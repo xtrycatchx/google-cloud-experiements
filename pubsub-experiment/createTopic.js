@@ -1,7 +1,7 @@
 const pubsub = require('@google-cloud/pubsub');
 const pubsubClient = pubsub({
     projectId: 'curious-cistern-185603',
-    keyFilename: 'keyfile.json'
+    keyFilename: '../keyfile.json'
 });
 
 console.log('started creating topic')

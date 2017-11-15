@@ -5,8 +5,8 @@ const pubsubClient = pubsub({
 });
 
 console.log('started creating topic')
-const topic = pubsubClient.createTopic('TOPICXYZ', null, function (err, topic, resp) {
-    if(err) {
+pubsubClient.createTopic('TOPICXYZ', null, (err, topic, resp) => {
+    if (err) {
         console.log("ERR", err)
     } else {
         console.log(`topic ${JSON.stringify(topic)}`);

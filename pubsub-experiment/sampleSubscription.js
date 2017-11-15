@@ -1,11 +1,11 @@
-var pubsub = require('@google-cloud/pubsub')({
+const pubsub = require('@google-cloud/pubsub')({
     projectId: 'curious-cistern-185603',
     keyFilename: '../keyfile.json'
 });
 
 // dapat naa ni na topic daan
 const topic = pubsub.topic('TOPICXYZ');
-topic.createSubscription('TOPICXYZ', function (err, subscription) {
+topic.createSubscription('TOPICXYZ', (err, subscription) => {
     function onError(err) {
         console.error(`hit onError ${JSON.stringify(err)}`)
     }

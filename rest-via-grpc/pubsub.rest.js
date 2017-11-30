@@ -22,6 +22,17 @@ class PubSubRest {
             });
         });
     }
+
+    deleteTopic(topicName) {
+        return new Promise((resolve, reject) => {
+            const parameter = {
+                topic: `projects/${this._projectId}/topics/${topicName}`
+            }
+            this._pubsub.projects.topics.delete(parameter, (err, data) => {
+                err ? console.log(err) : console.log(data);
+            })
+        })
+    }
 }
 
 module.exports = PubSubRest;

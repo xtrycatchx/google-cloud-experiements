@@ -13,6 +13,15 @@ describe('Testing PubSubRest', function () {
             should.fail(`this shouldt happened ${err}`)
         })
     });
+
+    it('should delete topic', done => {
+        const serviceAccount = JSON.parse(fs.readFileSync(keyfileLocation));
+        new PubSubRest(serviceAccount).deleteSubscription('MYTOPIC').then(() => {
+            done();
+        }).catch(err => {
+            should.fail(`this shouldt happened ${err}`)
+        })
+    });
 })
 
 

@@ -11,6 +11,17 @@ class PubSubRest {
         jwtAccess.scopes = 'https://www.googleapis.com/auth/cloud-platform';
         google.options({ auth: jwtAccess });
     }
+
+    deleteSubscription(subscriptioName) {
+        return new Promise((resolve, reject) => {
+            const parameter = {
+                subscription: `projects/${this._projectId}/topics/${subscriptioName}`
+            }
+            this._pubsub.projects.subscriptions.delete(parameter, (err, data) => {
+                err ? console.log(err) : console.log(data);
+            });
+        });
+    }
 }
 
 module.exports = PubSubRest;

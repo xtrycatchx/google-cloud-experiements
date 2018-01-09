@@ -4,8 +4,8 @@ const bigtable = Bigtable({
     keyFilename: '../keyfile.json'
 });
 const instanceName = 'sydney-instance';
-var instance = bigtable.instance(instanceName);
-var table = instance.table('tablexyz');
+const instance = bigtable.instance(instanceName);
+const table = instance.table('tablexyz');
 
 table.getRows(function (err, rows) {
     if (err) {

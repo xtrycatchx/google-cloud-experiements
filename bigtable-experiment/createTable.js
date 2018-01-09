@@ -6,7 +6,7 @@ const bigtable = Bigtable({
 const instanceName = 'sydney-instance';
 const instance = bigtable.instance(instanceName);
 
-instance.createTable('tablexyz', function (err, table) {
+instance.createTable('tablexyz', (err, table) =>{
     if (err) {
         console.log(`error creating table ${err}`)
     } else {

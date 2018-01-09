@@ -55,7 +55,7 @@ client.on('close', () => {
 });
 
 client.on('error', (err) => {
-    console.log('error', err);
+    console.log(`error ${err}`);
 });
 
 client.on('packetsend', () => {

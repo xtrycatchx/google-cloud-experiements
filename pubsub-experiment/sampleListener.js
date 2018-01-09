@@ -7,7 +7,7 @@ const pubsub = PubSub({
 // dapat naa ni na subscription daan
 const subscription = pubsub.subscription('TOPICXYZ');
 
-const messageHandler = (message) => {
+const messageHandler = message => {
     console.log(`Received message ${message.id}:`);
     console.log(`\tData: ${message.data}`);
     console.log(`\tAttributes: ${JSON.stringify(message.attributes, null, 2)}`);

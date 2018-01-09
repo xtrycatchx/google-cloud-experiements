@@ -9,7 +9,7 @@ topic.createSubscription('TOPICXYZ', (err, subscription) => {
     const onError = err => {
         console.error(`hit onError ${JSON.stringify(err)}`)
     }
-    function onMessage(message) {
+    const onMessage = message => {
         console.log(`hit onMessage ${message.data}`)
     }
     subscription.on('error', onError);

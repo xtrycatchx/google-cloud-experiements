@@ -16,5 +16,5 @@ storage
         console.log(`${filename} uploaded to ${bucketName}.`);
     })
     .catch(err => {
-        console.error('ERROR:', err);
+        console.error(`ERROR: ${err}`);
     });

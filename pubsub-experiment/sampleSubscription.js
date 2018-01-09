@@ -6,7 +6,7 @@ const pubsub = require('@google-cloud/pubsub')({
 // dapat naa ni na topic daan
 const topic = pubsub.topic('TOPICXYZ');
 topic.createSubscription('TOPICXYZ', (err, subscription) => {
-    function onError(err) {
+    const onError = err => {
         console.error(`hit onError ${JSON.stringify(err)}`)
     }
     function onMessage(message) {

@@ -4,7 +4,7 @@ const bigtable = Bigtable({
     keyFilename: '../keyfile.json'
 });
 const instanceName = 'sydney-instance';
-var instance = bigtable.instance(instanceName);
+const instance = bigtable.instance(instanceName);
 
 //butange ug filter para ang latest ra ang makuha
 const filter = [
@@ -21,7 +21,7 @@ const row = table.row('112233445566FF00');
 
 row.get({
     filter: filter
-}, function (err) {
+}, err => {
     if (err) {
         console.log(`error getting row ${err}`)
     } else {

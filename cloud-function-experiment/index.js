@@ -74,7 +74,7 @@ const sendDataToDevice = (clientAndAuthAndDevice, deviceName, message) => new Pr
     });
 });
 
-exports.SendSomethingToDevice = (request, response)=> {
+exports.SendSomethingToDevice = (request, response) => {
     console.log(`SYDNEY>>>> ${request.body}`);
     const message = request.body.message;
     const deviceId = request.body.deviceId;

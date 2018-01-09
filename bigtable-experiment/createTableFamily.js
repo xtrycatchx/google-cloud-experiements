@@ -5,7 +5,7 @@ const bigtable = Bigtable({
 });
 const instanceName = 'sydney-instance';
 const instance = bigtable.instance(instanceName);
-var table = instance.table('tablexyz');
+const table = instance.table('tablexyz');
 
 table.createFamily('yawe', function (err, family) {
     if (err) {

@@ -7,7 +7,7 @@ const instanceName = 'sydney-instance';
 const instance = bigtable.instance(instanceName);
 const table = instance.table('tablexyz');
 
-table.getRows( (err, rows)=> {
+table.getRows((err, rows) => {
     if (err) {
         console.log(`error getting rows ${err}`)
     } else {

@@ -47,7 +47,7 @@ getClient(serviceJ, (client) => {
             console.log(`Error configuring : ${deviceId}`);
             console.log(err);
         } else {
-            console.log('Configured device:', deviceId);
+            console.log(`Configured device: ${deviceId}`);
             console.log(data);
         }
     });

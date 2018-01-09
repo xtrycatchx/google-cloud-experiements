@@ -19,7 +19,7 @@ class PubSubRest {
             }
             this._pubsub.projects.subscriptions.delete(parameter, (err, data) => {
                 if (err) {
-                    console.log(err)
+                    console.error(err)
                     reject(err)
                 }
                 console.log(data);
@@ -34,7 +34,12 @@ class PubSubRest {
                 topic: `projects/${this._projectId}/topics/${topicName}`
             }
             this._pubsub.projects.topics.delete(parameter, (err, data) => {
-                err ? console.log(err) : console.log(data);
+                if (err) {
+                    console.error(err)
+                    reject(err)
+                }
+                console.log(data);
+                resolve(data)
             })
         })
     }

@@ -4,7 +4,7 @@ const bigtable = Bigtable({
     keyFilename: '../keyfile.json'
 });
 const instanceName = 'sydney-instance';
-var instance = bigtable.instance(instanceName);
+const instance = bigtable.instance(instanceName);
 var table = instance.table('tablexyz');
 
 table.createFamily('yawe', function (err, family) {

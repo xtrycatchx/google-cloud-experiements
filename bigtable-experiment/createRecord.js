@@ -26,7 +26,7 @@ const rows = [
     }
 ];
 
-table.insert(rows, function (err) {
+table.insert(rows, err => {
     if (err) {
         console.log(`error inserting data ${err}`)
     } else {

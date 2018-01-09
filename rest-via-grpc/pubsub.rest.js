@@ -18,7 +18,12 @@ class PubSubRest {
                 subscription: `projects/${this._projectId}/topics/${subscriptioName}`
             }
             this._pubsub.projects.subscriptions.delete(parameter, (err, data) => {
-                err ? console.log(err) : console.log(data);
+                if (err) {
+                    console.log(err)
+                    reject(err)
+                }
+                console.log(data);
+                resolve(data)
             });
         });
     }

@@ -44,7 +44,7 @@ getClient(serviceJ, (client) => {
 
     client.projects.locations.registries.devices.modifyCloudToDeviceConfig(request, (err, data) => {
         if (err) {
-            console.log('Error configuring :', deviceId);
+            console.log(`Error configuring : ${deviceId}`);
             console.log(err);
         } else {
             console.log('Configured device:', deviceId);

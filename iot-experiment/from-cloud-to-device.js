@@ -16,7 +16,7 @@ function getClient(serviceAccountJson, cb) {
 
     google.discoverAPI(discoveryUrl, {}, (err, client) => {
         if (err) {
-            console.log('Error during API discovery', err);
+            console.log(`Error during API discovery ${err}`);
             return undefined;
         }
         cb(client);
